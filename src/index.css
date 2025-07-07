@@ -1,0 +1,278 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* EchoShop Enterprise Design System - Professional Voice Commerce */
+
+@layer base {
+  :root {
+    /* Base colors - Professional Enterprise Theme */
+    --background: 222 47% 8%;
+    --foreground: 210 40% 98%;
+
+    /* Card system */
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+
+    /* Popover system */
+    --popover: 222 47% 9%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Professional Primary - Warm Coral */
+    --primary: 12 100% 62%;
+    --primary-foreground: 210 40% 98%;
+    --primary-glow: 24 100% 75%;
+    --primary-dark: 12 100% 45%;
+
+    /* Secondary - Professional Grey */
+    --secondary: 215 16% 47%;
+    --secondary-foreground: 210 40% 98%;
+
+    /* Muted tones */
+    --muted: 215 32% 27%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    /* Accent - Warm Orange */
+    --accent: 24 100% 70%;
+    --accent-foreground: 222 47% 8%;
+    --accent-glow: 24 100% 80%;
+
+    /* Status colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
+
+    /* Borders and inputs */
+    --border: 215 32% 27%;
+    --input: 215 32% 35%;
+    --ring: 212 100% 50%;
+
+    /* Food-themed Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(12 100% 62%), hsl(24 100% 70%));
+    --gradient-accent: linear-gradient(135deg, hsl(24 100% 70%), hsl(12 100% 62%));
+    --gradient-hero: linear-gradient(135deg, hsl(12 100% 62%) 0%, hsl(222 47% 8%) 50%, hsl(24 100% 70%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(222 47% 11%) 0%, hsl(12 100% 15%) 100%);
+    
+    /* Professional Effects */
+    --glow-primary: 0 0 40px hsl(var(--primary) / 0.3);
+    --glow-accent: 0 0 30px hsl(var(--accent) / 0.4);
+    --shadow-enterprise: 0 25px 50px -12px hsl(0 0% 0% / 0.4);
+    --shadow-card: 0 10px 25px -5px hsl(0 0% 0% / 0.2);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-enterprise: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+}
+
+/* Enterprise Voice Components & Effects */
+@layer components {
+  .voice-pulse {
+    animation: voice-pulse var(--pulse-duration) ease-in-out infinite;
+  }
+  
+  .voice-active {
+    box-shadow: var(--glow-primary);
+    animation: voice-glow 1.5s ease-in-out infinite alternate;
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .glass-effect {
+    backdrop-filter: blur(20px);
+    background: hsl(var(--card) / 0.7);
+    border: 1px solid hsl(var(--border) / 0.3);
+  }
+
+  .enterprise-shadow {
+    box-shadow: var(--shadow-enterprise);
+  }
+
+  .card-shadow {
+    box-shadow: var(--shadow-card);
+  }
+
+  .parallax-section {
+    transform-style: preserve-3d;
+  }
+
+  .agent-indicator {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .agent-indicator::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.2), transparent);
+    transition: left 0.8s ease;
+  }
+
+  .agent-indicator.active::before {
+    left: 100%;
+  }
+
+  .hover-lift {
+    transition: var(--transition-enterprise);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-enterprise);
+  }
+
+  .professional-grid {
+    background-image: 
+      radial-gradient(circle at 1px 1px, hsl(var(--primary) / 0.1) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: var(--gradient-hero);
+    min-height: 100vh;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    scroll-behavior: smooth;
+  }
+
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+}
+
+@keyframes voice-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+@keyframes voice-glow {
+  0% { box-shadow: 0 0 20px hsl(var(--primary) / 0.3); }
+  100% { box-shadow: var(--glow-primary); }
+}
+
+@keyframes fade-in-up {
+  0% { 
+    opacity: 0; 
+    transform: translateY(40px); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes parallax-float {
+  0%, 100% { transform: translateY(0px) rotateX(0deg); }
+  50% { transform: translateY(-20px) rotateX(5deg); }
+}
+
+@keyframes agent-pulse {
+  0%, 100% { 
+    background-color: hsl(var(--muted));
+    transform: scale(1);
+  }
+  50% { 
+    background-color: hsl(var(--primary));
+    transform: scale(1.05);
+    box-shadow: var(--glow-primary);
+  }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Professional UI Enhancements */
+@layer utilities {
+  .pro-card {
+    @apply bg-card/80 backdrop-blur-sm border-0 shadow-xl rounded-xl;
+  }
+
+  .pro-card-hover {
+    @apply hover:bg-card/90 hover:shadow-2xl transition-all duration-300;
+  }
+
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
+  }
+
+  /* Voice interface animations */
+  @keyframes voice-wave {
+    0%, 100% { transform: scaleY(0.3); }
+    50% { transform: scaleY(1); }
+  }
+
+  .voice-wave {
+    animation: voice-wave 1s ease-in-out infinite;
+  }
+
+  /* Smooth transitions for all elements */
+  * {
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  }
+}
