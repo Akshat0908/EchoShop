@@ -1,6 +1,6 @@
 # EchoShop - Voice-First AI Food Ordering Platform
 
-**🏆 RAISE YOUR HACKathon 2025 - Prosus Track Submission**
+<img width="1435" alt="Screenshot 2025-07-08 at 2 04 09 AM" src="https://github.com/user-attachments/assets/94e99448-4ea9-4d7e-8ac0-c3d7648d296e" />
 
 EchoShop is a cutting-edge voice-first e-commerce application that revolutionizes food ordering through AI-powered conversational interfaces. Built with Groq's high-speed inference, Llama 3 models, and a sophisticated multi-agent system architecture.
 
@@ -8,9 +8,17 @@ EchoShop is a cutting-edge voice-first e-commerce application that revolutionize
 
 EchoShop represents the future of food ordering - a completely voice-driven experience that combines the power of AI with intuitive natural language processing. Users can order food, manage their cart, and complete transactions entirely through voice commands.
 
+
+<img width="1435" alt="Screenshot 2025-07-08 at 2 05 55 AM" src="https://github.com/user-attachments/assets/1537e883-a9bc-4a8d-bb7a-dfe35c634f19" />
+
+
+
 ## 🚀 Live Demo
 - **Web Application**: Run `npm run dev` to start the development server
 - **Repository**: This repository contains the complete source code for EchoShop
+
+  <img width="1440" alt="Screenshot 2025-07-08 at 2 04 30 AM" src="https://github.com/user-attachments/assets/30360868-8cc0-4ea9-89a6-82a84ff5c923" />
+
 
 ## ⚡ Performance Optimizations
 
@@ -38,6 +46,9 @@ EchoShop represents the future of food ordering - a completely voice-driven expe
 - **Voice Activity Visualization**: Real-time audio waveform display
 - **API Latency Tracking**: Groq response time monitoring
 - **Confidence Scoring**: AI response confidence indicators
+
+
+<img width="888" alt="Screenshot 2025-07-08 at 2 05 01 AM" src="https://github.com/user-attachments/assets/af0cc3be-d8df-44ce-9b51-2c546f50d94b" />
 
 ## 🎯 Core Features
 
